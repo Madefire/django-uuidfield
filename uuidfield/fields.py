@@ -171,7 +171,7 @@ class UUIDField(Field):
         return value
 
     def value_to_string(self, obj):
-        val = self._get_val_from_obj(obj)
+        val = self.value_from_object(obj)
         if val is None:
             data = ''
         else:
